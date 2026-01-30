@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Bioscope | Player</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="card">
-    <h1>Bioscope</h1>
+<canvas id="particles"></canvas>
 
-    <p class="timer">Time: <span id="time">0</span>s</p>
+<div class="card">
 
-    <input type="text" id="teamName" placeholder="Team Name">
-    <input type="text" id="answer" placeholder="Your Answer">
+  <!-- JOIN SECTION -->
+  <div id="joinSection">
+    <h1>🎬 Bioscope</h1>
 
-    <button id="submitBtn">Submit Answer</button>
+    <input id="teamName" placeholder="Team Name" />
+    <input id="teamNo" placeholder="Team Number" />
 
-    <p id="status"></p>
+    <div class="logo-picker">
+      <span class="logo">🔥</span>
+      <span class="logo">⚡</span>
+      <span class="logo">🚀</span>
+      <span class="logo">🎯</span>
+    </div>
+
+    <button id="joinBtn">Join Game</button>
+    <p id="joinStatus"></p>
   </div>
 
-  <script src="script.js"></script>
+  <!-- WAITING SECTION -->
+  <div id="waitSection" class="hidden">
+    <h2>⏳ Waiting for host to start the game</h2>
+  </div>
+
+  <!-- ANSWER SECTION -->
+  <div id="answerSection" class="hidden">
+    <p class="timer">Time: <span id="time">30</span>s</p>
+    <input id="answerBox" placeholder="Enter your answer" />
+    <button id="submitAnswer">Submit Answer</button>
+    <p id="answerStatus"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
